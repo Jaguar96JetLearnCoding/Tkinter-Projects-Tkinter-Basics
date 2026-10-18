@@ -1,0 +1,26 @@
+import tkinter
+screen=tkinter.Tk()
+screen.geometry("600x600")
+
+
+#Functions for the Buttons
+def enterbutton():
+    enter_screen_1=tkinter.Tk()
+    screen.config(background="#1A77D1")
+    label_screen_1=tkinter.Label(enter_screen_1,text="Found: Here are some cards from your search:")
+    button_screen_1=tkinter.Button(enter_screen_1,text="Go back")
+    screen.destroy()
+    label_screen_1.pack()
+    button_screen_1.pack()
+##def goback_screen1():
+    ##enter_screen_1.destroy()
+
+
+#Widgets (they are CLASSES!)
+label=tkinter.Label(screen,text="Enter the card you want to pack")
+entry=tkinter.Entry(screen)
+button=tkinter.Button(screen,text="Enter",command=enterbutton)
+label.pack()
+entry.pack()
+button.pack()
+screen.mainloop()
